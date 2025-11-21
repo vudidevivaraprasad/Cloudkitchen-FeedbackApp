@@ -1,0 +1,114 @@
+/* ---------- TABLE CONTAINER ---------- */
+.fancy-table {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* ---------- HEADER STYLING ---------- */
+.fancy-table .mat-mdc-header-row {
+  background: linear-gradient(135deg, #4a90e2, #0072ff);
+}
+
+.fancy-table .mat-mdc-header-cell {
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 15px;
+  padding: 16px 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ---------- ROW STYLING ---------- */
+.fancy-table .mat-mdc-row {
+  background: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.fancy-table .mat-mdc-row:hover {
+  background: #f1f5ff;
+  transform: scale(1.01);
+}
+
+/* ---------- CELL STYLING ---------- */
+.fancy-table .mat-mdc-cell {
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+/* ---------- SORT ARROW COLOR ---------- */
+.fancy-table .mat-sort-header-arrow {
+  color: #ffffff !important;
+}
+
+/* ---------- ZEBRA LINES (optional) ---------- */
+.fancy-table .mat-mdc-row:nth-child(even) {
+  background: #fafafa;
+}
+
+/* ---------- PAGINATOR STYLING ---------- */
+.mat-mdc-paginator {
+  background: #ffffff;
+  border-top: 2px solid #f0f0f0;
+  border-radius: 0 0 12px 12px;
+  padding: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.mat-mdc-paginator .mat-mdc-select-value {
+  font-weight: 600;
+}
+
+.mat-mdc-paginator-container {
+  justify-content: space-between !important;
+}
+
+.feedback-cell {
+  cursor: pointer;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.table-responsive-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+
+
+
+.analytics-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.chart-box {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.rating-card {
+  background: linear-gradient(135deg, #4a90e2, #0072ff);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.rating-card h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0;
+}
+

@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { FeedbacktableComponent } from './feedbacktable/feedbacktable.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { FeedbacktableComponent } from './feedbacktable/feedbacktable.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

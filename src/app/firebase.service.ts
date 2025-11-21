@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {initializeApp} from 'firebase/app';
-import {Feedbackdata, firebaseConfig, formpropertiesdata} from 'src/app/environment'
+import {Feedbackdata, firebaseConfig, firebasefeedbackdata, formpropertiesdata} from 'src/app/environment'
 import { getFirestore, collection, addDoc, getDocs} from 'firebase/firestore';
 
 @Injectable({
@@ -17,10 +17,10 @@ export class FirebaseService {
     const feedbackRef = collection(this.db, "feedbacks");
     return addDoc(feedbackRef, {...data,date:Date.now()});
   }
-  async getFeedbacks() {
+  async getFeedbacks():Promise<firebasefeedbackdata[]> {
     const feedbackRef = collection(this.db, "feedbacks");
     const snapshot = await getDocs(feedbackRef);
-    console.log('Feedbacks data',snapshot)
+    return snapshot.docs.map(doc => doc.data()) as firebasefeedbackdata[];
   }
   async getfeeddbackformproperties():Promise<formpropertiesdata | null> {
     const feedbackRef = collection(this.db, "itemsdata");

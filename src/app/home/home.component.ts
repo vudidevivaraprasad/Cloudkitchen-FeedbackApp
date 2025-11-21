@@ -18,25 +18,19 @@ export class HomeComponent {
     }
     keys = Object.keys(this.numberofstars)
 
-    menu:string[] = ['pizza','burger','sandwidge']
-    flavour:{[key:string]:string[]} = {
-      'pizza':['normal','large','medium'],
-      'burger':['normal','large','medium'],
-      'sandwidge':['normal','large','medium'],
-    }
     submitdata:Feedbackdata = {} as Feedbackdata
     error:string = ''
     menuerr:boolean = false
     submitted:boolean = false
 
-    // menu:formpropertiesdata['data']['menu'] | undefined = []
-    // flavour:formpropertiesdata['data']['flavour'] | undefined = {}
+    menu:formpropertiesdata['data']['menu'] | undefined = []
+    flavour:formpropertiesdata['data']['flavour'] | undefined = {}
 
     constructor(private firebase: FirebaseService) {
-      // firebase.getfeeddbackformproperties().then(data => {
-      //   this.menu=data?.data.menu
-      //   this.flavour=data?.data.flavour
-      // });
+      firebase.getfeeddbackformproperties().then(data => {
+        this.menu=data?.data.menu
+        this.flavour=data?.data.flavour
+      });
     }
 
     starclick(value:string) {

@@ -21,3 +21,11 @@ export interface formpropertiesdata{
     flavour:{[key:string]:string[]}
   }
 }
+
+export interface firebasefeedbackdata{
+  menu:string,
+  flavour:string,
+  rating:number,
+  feedback:string,
+  date:number
+}
